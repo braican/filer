@@ -1,0 +1,23 @@
+@mixin h-1($family: $sans, $weight: $bold, $lh: $line-height--h) {
+  @include font($family, $font-size--h1, $weight, $lh);
+}
+
+@mixin h-2($family: $sans, $weight: $regular, $lh: $line-height--h) {
+  @include font($family, $font-size--h2, $weight, $lh);
+}
+
+@mixin h-3($family: $sans, $weight: $regular, $lh: $line-height--h) {
+  @include font($family, $font-size--h3, $weight, $lh);
+}
+
+@mixin h-4($family: $sans, $weight: $bolder, $lh: $line-height--h) {
+  @include font($family, $font-size--h4, $weight, $lh);
+}
+
+@mixin h-5($family: $sans, $weight: $bold, $lh: $line-height--h) {
+  @include font($family, $font-size--h5, $weight, $lh);
+}
+
+@mixin h-6($family: $sans, $weight: $bold, $lh: $line-height--h) {
+  @include font($family, $font-size--h6, $weight, $lh);
+}

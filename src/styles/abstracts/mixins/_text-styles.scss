@@ -1,0 +1,37 @@
+@mixin uppercase($ls: 0.05em) {
+  text-transform: uppercase;
+  letter-spacing: $ls;
+}
+
+@mixin transition($duration: 0.3s, $property: all) {
+  transition: $property $duration $timing--butter;
+}
+
+// Styles for overlines / tags etc..
+@mixin overline($ff: $sans-display, $uppercase: true) {
+  @include font($ff, $fs--xxxs, false, $fw--reg);
+
+  @if $uppercase {
+    @include uppercase();
+  }
+}
+
+@mixin body-text {
+  @include font($sans, 17px, $lh--base, $fw--reg);
+
+  @include mq($bp--tablet) {
+    @include font(false, $fs--sm);
+  }
+
+  b,
+  strong {
+    font-weight: 500;
+  }
+}
+
+@mixin cta-text-styles($weight: 400, $font-size: true) {
+  @if $font-size {
+    font-size: 12px;
+  }
+  @include font($sans-display, false, 1.3, $weight, false, uppercase, 1px);
+}

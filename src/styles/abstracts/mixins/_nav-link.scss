@@ -1,0 +1,32 @@
+@mixin nav-link($size: normal, $mode: light) {
+  @include link();
+  @include margin($spacing--xs 0);
+  transition: $transition;
+
+  @if $size == 'normal' {
+    font-size: $fs--base;
+  } @else if $size == 'small' {
+    font-size: $fs--xxs;
+    opacity: $opacity-light;
+
+    &:hover {
+      box-shadow: none;
+      opacity: 1;
+    }
+  }
+
+  @if $mode == 'light' {
+    color: $c--white;
+  } @else if $mode == 'dark' {
+    color: $c--black;
+  }
+
+  @include mq($bp-1) {
+    @include margin(0 $spacing--sm);
+    @include padding($spacing--sm);
+  }
+
+  &:hover {
+    color: $c--red;
+  }
+}

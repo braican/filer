@@ -1,0 +1,30 @@
+@mixin link($color: currentColor, $target: false) {
+  @if ($target == false) {
+    transition: box-shadow $transition, color $transition;
+    text-decoration: none;
+    @if ($color != currentColor) {
+      box-shadow: 0 -1px rgba($color, 0) inset;
+    }
+
+    &:focus,
+    &:hover {
+      color: inherit;
+      box-shadow: 0 -1px $color inset;
+    }
+  } @else {
+    text-decoration: none;
+
+    #{$target} {
+      transition: box-shadow $transition, color $transition;
+      @if ($color != currentColor) {
+        box-shadow: 0 -1px rgba($color, 0) inset;
+      }
+    }
+
+    &:focus #{$target},
+    &:hover #{$target} {
+      color: inherit;
+      box-shadow: 0 -1px $color inset;
+    }
+  }
+}
