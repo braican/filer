@@ -1,0 +1,10 @@
+{
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "extends": "@upstatement/eslint-config/vue",
+  "parserOptions": {
+    "parser": "babel-eslint"
+  }
+}
