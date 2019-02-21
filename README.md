@@ -1,29 +1,34 @@
-# filer
+# Filer 📓
 
-## Project setup
-```
+There are too many note taking apps. So I'm building another one.
+
+## Installation
+
+```bash
+# Make sure we're looking at the right version of node.
+nvm install
+
+# Install dependencies.
 yarn install
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
+## Development
+
+Starts the development server and hot-reloading action.
+```bash
+yarn start
 ```
 
-### Compiles and minifies for production
-```
+## Other commands
+**Compiles and minifies for production**
+```bash
 yarn run build
 ```
 
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
+**Lints and fixes files**
 ```
 yarn run lint
 ```
 
-### Customize configuration
+## Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
