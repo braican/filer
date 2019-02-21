@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <router-view />
     <footer>&copy; {{ new Date().getFullYear() }}. Nick Braica</footer>
   </div>
 </template>
