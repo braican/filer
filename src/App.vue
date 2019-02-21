@@ -1,5 +1,7 @@
 <template>
-  <div id="app" />
+  <div id="app">
+    <footer>&copy; {{ new Date().getFullYear() }}. Nick Braica</footer>
+  </div>
 </template>
 
 <script>
